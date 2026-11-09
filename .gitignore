@@ -1,0 +1,9 @@
+.env
+.env.local
+dist
+node_modules
+
+*.backup
+*.backup[0-9]*
+.env.*
+!.env.example

@@ -1,0 +1,133 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { renderToStaticMarkup } from "react-dom/server";
+import { createBox } from "ol/interaction/Draw";
+import Polygon from "ol/geom/Polygon";
+import Feature from "ol/Feature";
+import Point from "ol/geom/Point";
+import LineString from "ol/geom/LineString";
+import { circlePolygon, drawnCircle, finishPolygon } from "../src/lib/shapes";
+import { moveFeature } from "../src/lib/featureEdits";
+import { dest, fromOl, measured, toOl } from "../src/lib/geo";
+import { parseGardenFile } from "../src/lib/storage";
+import { History } from "../src/lib/history";
+import { buildOverlays } from "../src/lib/analysis";
+import { shadeFans, drawingBearing } from "../src/map/permacultureLayers";
+import { featureStyle } from "../src/map/drawTools";
+import { matchingPlants, plantingProps } from "../src/ui/PlantPicker";
+import PlantPicker from "../src/ui/PlantPicker";
+import ShapePicker from "../src/ui/ShapePicker";
+import LayerPanel from "../src/ui/LayerPanel";
+import { PlantCard } from "../src/ui/PropertyPanel";
+import type { GardenFeature, GardenFile, GeoPolygon } from "../src/types/garden";
+import type { PlantGuildData } from "../src/lib/guilds";
+
+const data: PlantGuildData = JSON.parse(readFileSync('../data/plant_guilds.json', 'utf8'));
+const center: [number, number] = [127, 36];
+const circle = drawnCircle(center, dest(center, 90, 12));
+const base: GeoPolygon = { type: "Polygon", coordinates: [[center, dest(center, 90, 25), dest(dest(center, 90, 25), 180, 15), dest(center, 180, 15), center]] };
+const projected = toOl(base);
+assert(projected instanceof Polygon);
+const smooth = fromOl(finishPolygon(projected, "smooth", .01));
+const freehandRing = Array.from({ length: 361 }, (_, i) => dest(center, i, 18 + Math.sin(i * .15) * .2));
+freehandRing[360] = freehandRing[0];
+const freehandPoly = toOl({ type: "Polygon", coordinates: [freehandRing] });
+assert(freehandPoly instanceof Polygon);
+const freehand = fromOl(finishPolygon(freehandPoly, "freehand", .4));
+const rectOl = createBox()([[0, 0], [30, 20]], undefined, "EPSG:3857");
+assert(rectOl instanceof Polygon);
+const rectangle = fromOl(rectOl);
+const sample = (id: string, geometry: GardenFeature['geometry'], shape: GardenFeature['props']['shape'], kind: GardenFeature['kind'] = 'zone'): GardenFeature => ({ id, geometry, kind, props: measured(kind, geometry, { shape, zone: 1 }) });
+const shapes = [sample('circle', circle.geometry, circle.shape), sample('freehand', freehand, {mode:'freehand'}), sample('smooth', smooth, {mode:'smooth'}, 'bed'), sample('polygon', base, {mode:'polygon'}), sample('rectangle', rectangle, {mode:'rectangle'})];
+const tree: GardenFeature = { id: 'tree', kind: 'tree', geometry: {type:'Point',coordinates:center}, props:{ guildId:'group', canopyM:3, heightM:6 } };
+const member: GardenFeature = {id:'member',kind:'plant',geometry:{type:'Point',coordinates:dest(center,90,3)},props:{guildId:'group'}};
+const arrow: GardenFeature = {id:'water',kind:'water-flow',geometry:{type:'LineString',coordinates:[center,dest(center,135,20)]},props:{name:'유출 방향 (수동)'}};
+arrow.props=measured(arrow.kind,arrow.geometry,arrow.props);
+const file: GardenFile = {schemaVersion:1,meta:{name:'3단계 로컬 검증',createdAt:'2026-11-09T00:00:00Z',updatedAt:'2026-11-09T00:00:00Z',northDeg:15},place:{center:{lon:127,lat:36},zoom:19,bbox:{west:0,east:0,north:0,south:0},basemap:{provider:'vworld-satellite',attribution:'VWorld'}},features:[...shapes,tree,member,arrow],analysis:{date:'2026-06-21',hour:12,overlays:{sun:true,shade:true}},ui:{activeLayerIds:['satellite'],hiddenKinds:['water-flow']}};
+
+test('all five area modes are polygons with measured positive areas', () => {
+  for(const f of shapes) { assert.equal(f.geometry.type,'Polygon'); assert((f.props.areaM2 ?? 0)>0); }
+  assert.equal(rectOl.getArea(),600);
+  assert(Math.abs((shapes[0].props.areaM2 ?? 0) - Math.PI * 144)<1);
+  assert.equal(circle.shape.mode,'circle');
+  if(circle.shape.mode === 'circle') assert(Math.abs(circle.shape.radiusM-12)<.001);
+});
+test('freehand simplification reduces samples; Chaikin smooths and closes ring', () => {
+  assert(freehand.type==='Polygon' && smooth.type==='Polygon');
+  assert(freehand.coordinates[0].length < freehandRing.length / 2);
+  assert(smooth.coordinates[0].length>base.coordinates[0].length);
+  assert.deepEqual(smooth.coordinates[0][0],smooth.coordinates[0].at(-1));
+  assert.notDeepEqual(smooth.coordinates[0][0],base.coordinates[0][0]);
+});
+test('radius edit quadruples area, translation preserves radius and moves center; vertex edit detaches circle', () => {
+  const p=measured('zone',circlePolygon(center,24),{});
+  assert(Math.abs((p.areaM2 ?? 0) / (shapes[0].props.areaM2 ?? 1) - 4)<.01);
+  const geom: GeoPolygon={type:'Polygon',coordinates:circle.geometry.coordinates.map(r=>r.map(c=>[c[0]+.001,c[1]+.002]))};
+  const moved=moveFeature(shapes,'circle',geom,false,'translate')[0];
+  assert(moved.props.shape?.mode==='circle');
+  assert(Math.abs(moved.props.shape.center[0]-127.001)<1e-10);
+  assert.equal(moved.props.shape.radiusM,circle.shape.mode==='circle'?circle.shape.radiusM:0);
+  assert.equal(moveFeature(shapes,'circle',geom,false,'modify')[0].props.shape?.mode,'polygon');
+});
+test('member can move alone or translate whole guild from either anchor; one history step',()=>{
+  assert(member.geometry.type==='Point');
+  const newGeometry={type:'Point',coordinates:dest(member.geometry.coordinates,180,8)} satisfies GardenFeature['geometry'];
+  const alone=moveFeature([tree,member],'member',newGeometry,false,'translate');
+  assert.deepEqual(alone[0],tree); assert.notDeepEqual(alone[1],member);
+  const group=moveFeature([tree,member],'member',newGeometry,true,'translate');
+  assert.notDeepEqual(group[0],tree); assert.notDeepEqual(group[1],member);
+  const history=new History(); history.push([tree,member]);
+  assert.deepEqual(history.undo(group),[tree,member]);
+  assert.deepEqual(history.redo([tree,member]),group);
+  const treeMove=moveFeature([tree,member],'tree',newGeometry,true,'translate');
+  assert.notDeepEqual(treeMove[1],member);
+});
+test('real 60-plant catalog Korean search and crown diameter mapping are null safe',()=>{
+  assert.equal(data.plants.length,60); assert.equal(data.guilds.length,9);
+  const matches=matchingPlants(data.plants,'사과'); assert(matches.length>0);
+  for(const p of matches) assert(p.ko.includes('사과'));
+  const width=data.plants.find(p=>p.width_m!=null); assert(width);
+  assert.equal(plantingProps(width).canopyM,(width.width_m ?? 0)/2);
+  const missing={...width,width_m:null,height_m:null};
+  assert.equal(plantingProps(missing).canopyM,undefined);
+  assert.equal(plantingProps(missing).heightM,undefined);
+  const markup=renderToStaticMarkup(<PlantCard pl={missing}/>);
+  assert(markup.includes('정보 없음')); assert(markup.includes('PFAF UK zone')); assert(markup.includes('USDA 아님'));
+  assert(markup.includes('추정'));
+});
+test('water arrow length and arrowhead point towards last segment',()=>{
+  assert(Math.abs((arrow.props.lengthM ?? 0)-20)<.1);
+  const olGeom=toOl(arrow.geometry); assert(olGeom instanceof LineString);
+  const styles=featureStyle(new Feature({kind:arrow.kind,geometry:olGeom,props:arrow.props}),1,false);
+  const head=styles.at(-1)?.getGeometry(); assert(head instanceof Point);
+  assert.deepEqual(head.getCoordinates(),olGeom.getLastCoordinate());
+});
+test('northDeg rotates incidence and illustrative shade fan; night produces no shade',()=>{
+  assert.equal(drawingBearing(180,15),165);
+  const overlays=buildOverlays(file,null,null,null);
+  assert(overlays.some(o=>o.okind==='sun'));
+  assert(overlays.some(o=>o.okind==='shade'));
+  assert.equal(shadeFans([tree],180,-5).length,0);
+  const raw=buildOverlays({...file,meta:{...file.meta,northDeg:0}},null,null,null);
+  assert.notDeepEqual(overlays.find(o=>o.okind==='sun')?.geometry,raw.find(o=>o.okind==='sun')?.geometry);
+  const fan=overlays.find(o=>o.okind==='shade'); assert(fan?.label?.includes('정밀 시뮬레이션 아님'));
+});
+test('new shapes, hidden layers and water-flow survive actual file parser; stage2 stays readable',()=>{
+  assert.deepEqual(parseGardenFile(JSON.stringify(file)),file);
+  const old=JSON.parse(readFileSync('../shots/round_trip.garden.json','utf8'));
+  const restored=parseGardenFile(JSON.stringify(old));
+  assert.equal(restored.features.length,36);
+  assert.equal(restored.ui?.hiddenKinds,undefined);
+});
+test('server-rendered controls expose all modes, 60 plants and layer checkboxes',()=>{
+  const shape=renderToStaticMarkup(<ShapePicker mode="circle" onChange={()=>{}}/>);
+  for(const label of ['다각형','사각형','원','자유곡선','곡선'])assert(shape.includes(label));
+  const picker=renderToStaticMarkup(<PlantPicker plants={data.plants} selectedId={data.plants[0].id} onPick={()=>{}}/>);
+  assert(picker.includes('한국 이름 검색')); assert(picker.includes('60')); assert(picker.includes('추정'));
+  const layers=renderToStaticMarkup(<LayerPanel features={file.features} hidden={['water-flow']} setHidden={()=>{}} showSat={false} setShowSat={()=>{}} overlays={file.analysis?.overlays} setOverlay={()=>{}} selectedId={null} onPick={()=>{}}/>);
+  for(const label of ['물흐름','섹터','구역','식물 전체','해 방향','그늘'])assert(layers.includes(label));
+  mkdirSync('../shots',{recursive:true});
+  writeFileSync('../shots/stage3-roundtrip.garden.json',JSON.stringify(file,null,2));
+  writeFileSync('../shots/19_stage3_controls_preview.html',`<!doctype html><meta charset="utf-8"><title>3단계 로컬 제어 미리보기</title><style>body{font:15px sans-serif;background:#17212b;color:#eee;max-width:1000px;margin:2rem auto}button,input{padding:6px;background:#263238;color:white;margin:3px}section{border:1px solid #607d8b;padding:16px} .plant-options{max-height:240px;overflow:auto;display:grid}.est{background:#705300;padding:2px}</style><h1>3단계 · 정적 제어 미리보기</h1><p>실행 화면 캡처 아님. 실제 React 컴포넌트 서버 렌더. 지도·상호작용은 이 파일에 없음.</p>${shape}<div style="display:grid;grid-template-columns:2fr 1fr;gap:16px">${picker}<aside>${layers}</aside></div>`);
+});

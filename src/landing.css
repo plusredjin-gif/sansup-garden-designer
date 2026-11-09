@@ -1,0 +1,72 @@
+/* 첫 화면 — 앱과 같은 차분한 초록 */
+.lp { --g1: #1f3a2c; --g2: #2e5d43; --g3: #4f8a61; --g4: #e8f1ea; --ink: #1d2a22; min-height: 100vh; background: #f7faf6; color: var(--ink); font-family: Pretendard, "Noto Sans KR", system-ui, sans-serif; overflow-y: auto; height: 100vh; }
+.lp a { color: inherit; }
+.lp-head { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px clamp(14px, 4vw, 48px); background: rgba(247,250,246,.92); backdrop-filter: blur(6px); border-bottom: 1px solid #dfe9e1; }
+.lp-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; font-size: 18px; color: var(--g1); }
+.lp-nav { display: flex; align-items: center; gap: 18px; font-size: 14px; }
+.lp-nav a { text-decoration: none; color: var(--g2); }
+.lp-btn { display: inline-flex; align-items: center; gap: 8px; border-radius: 10px; padding: 12px 18px; font: inherit; font-weight: 700; cursor: pointer; border: 1px solid var(--g2); background: #fff; color: var(--g1); }
+.lp-btn.primary { background: var(--g2); color: #fff; border-color: var(--g2); box-shadow: 0 6px 18px rgba(46,93,67,.25); }
+.lp-btn.primary:hover { background: var(--g1); }
+.lp-btn.ghost { background: transparent; }
+.lp-btn.sm { padding: 7px 12px; font-size: 13px; }
+.lp-btn:disabled { opacity: .6; cursor: wait; }
+.lp-hero { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(20px, 4vw, 56px); align-items: center; padding: clamp(28px, 6vw, 80px) clamp(14px, 4vw, 48px); background: radial-gradient(1200px 500px at 80% 0%, #dcebdf 0%, transparent 60%), linear-gradient(#f7faf6, #eef5ef); }
+.lp-hero h1 { font-size: clamp(32px, 5vw, 54px); line-height: 1.1; margin: 8px 0 14px; color: var(--g1); letter-spacing: -0.02em; }
+.lp-lead { font-size: clamp(16px, 1.8vw, 20px); line-height: 1.6; color: #34463a; margin: 0 0 22px; max-width: 34em; }
+.lp-cta { display: flex; flex-wrap: wrap; gap: 10px; }
+.lp-small { font-size: 13px; color: #5f7466; margin-top: 14px; }
+.lp-setup { margin-top: 14px; padding: 12px 14px; border-radius: 10px; background: #fff8e1; border: 1px solid #f1d27a; font-size: 14px; line-height: 1.6; }
+.lp-setup code, .lp-login code { background: #eef3ef; padding: 1px 5px; border-radius: 4px; font-size: .92em; }
+.linklike { background: none; border: 0; padding: 0; color: var(--g2); font: inherit; font-weight: 700; text-decoration: underline; cursor: pointer; }
+.lp-hero-shot img { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 18px 50px rgba(31,58,44,.25); border: 1px solid #cfe0d3; display: block; }
+.lp-hero-mascot { display: block; }
+.lp-features { padding: clamp(28px, 5vw, 64px) clamp(14px, 4vw, 48px); }
+.lp-features h2, .lp-login h2 { font-size: clamp(24px, 3vw, 32px); color: var(--g1); margin: 0 0 22px; }
+.lp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+.lp-card { background: #fff; border: 1px solid #dfe9e1; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+.lp-card-img { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--g4); }
+.lp-card-img img:first-child { width: 100%; height: 100%; object-fit: cover; display: block; }
+.lp-card-mascot { position: absolute; right: 8px; bottom: 6px; filter: drop-shadow(0 3px 6px rgba(0,0,0,.25)); }
+.lp-card h3 { margin: 14px 16px 6px; font-size: 18px; color: var(--g1); }
+.lp-card p { margin: 0 16px 18px; color: #42564a; line-height: 1.6; font-size: 14.5px; }
+.lp-login { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin: 0 clamp(14px, 4vw, 48px) 40px; padding: clamp(22px, 4vw, 44px); background: var(--g1); color: #eaf3ec; border-radius: 18px; }
+.lp-login h2 { color: #fff; }
+.lp-login ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+.lp-login li { display: flex; gap: 12px; align-items: flex-start; line-height: 1.6; }
+.lp-login li svg { flex: 0 0 auto; margin-top: 3px; color: #9fd3ad; }
+.lp-login code { background: rgba(255,255,255,.12); color: #fff; }
+.lp-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px; padding: 22px; border-top: 1px solid #dfe9e1; font-size: 14px; color: #4a5e51; }
+.lp-foot a { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; }
+@media (max-width: 820px) {
+  .lp-hero { grid-template-columns: 1fr; }
+  .lp-nav a { display: none; }
+  .lp-login { flex-direction: column; align-items: flex-start; }
+  .lp-login-mascot { align-self: center; }
+  .lp-btn { width: 100%; justify-content: center; }
+  .lp-btn.sm { width: auto; }
+}
+/* 편집기 계정·로딩 */
+.account { display: flex; align-items: center; gap: 6px; margin-left: 8px; }
+.account img.avatar { width: 26px; height: 26px; border-radius: 50%; }
+.account .email { font-size: 12px; color: #33463a; max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.reconnect { position: absolute; top: 8px; left: 50%; transform: translateX(-50%); z-index: 30; background: #fff3cd; border: 1px solid #e0b84c; padding: 8px 12px; border-radius: 8px; font-size: 13px; display: flex; gap: 8px; align-items: center; }
+.boot { position: fixed; inset: 0; display: grid; place-items: center; background: #f7faf6; z-index: 100; color: #2e5d43; font-weight: 700; }
+.boot > div { display: grid; justify-items: center; gap: 10px; }
+.drive-panel ul { list-style: none; padding: 0; margin: 6px 0; display: grid; gap: 4px; }
+.drive-panel li button { width: 100%; text-align: left; padding: 8px; border: 1px solid #cfdcd2; border-radius: 6px; background: #fff; cursor: pointer; }
+.drive-panel li small { display: block; color: #6a7d70; }
+.brand-logo { display: inline-block; vertical-align: middle; }
+.modal-mascot { float: right; margin: -6px 0 0 8px; }
+.topbar { min-width: 0; overflow-x: auto; overflow-y: hidden; }
+a.brand { text-decoration: none; }
+.account .btn { display: inline-flex; align-items: center; gap: 4px; padding: 5px 7px; }
+.account .btn .lbl { display: none; }
+@media (min-width: 1800px) { .account .btn .lbl { display: inline; } }
+@media (max-width: 1599px) { .account .email { display: none; } }
+/* 1440px 등에서 상단바 오른쪽 끝(로그아웃) 여백 확보 */
+@media (max-width: 1799px) {
+  .title-area { gap: 6px; }
+  .save-state { max-width: 170px; overflow: hidden; text-overflow: ellipsis; }
+  .account { gap: 4px; margin-left: 2px; }
+}

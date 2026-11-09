@@ -1,0 +1,14 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch(); const ctx = await b.newContext({ viewport: { width: 1200, height: 800 }, acceptDownloads: true }); const p = await ctx.newPage();
+await p.addInitScript(() => { const orig = HTMLCanvasElement.prototype.toDataURL; let n = 0; HTMLCanvasElement.prototype.toDataURL = function (...a) { if (n++ === 0) throw new DOMException('tainted', 'SecurityError'); return orig.apply(this, a); }; });
+await p.goto('http://localhost:4180/app', { waitUntil: 'networkidle' });
+await p.fill('input[placeholder="예: 햇살 텃밭"]', 'CORS 시험'); await p.click('button[type=submit]');
+await p.evaluate(() => { const m = window.__olmap; m.getView().setCenter([127.1107 * 20037508.34 / 180, Math.log(Math.tan((90 + 37.4005) * Math.PI / 360)) * 20037508.34 / Math.PI]); m.getView().setZoom(18); });
+await p.waitForTimeout(1500);
+await p.keyboard.press('Control+e'); await p.waitForTimeout(200);
+const [dl] = await Promise.all([p.waitForEvent('download'), p.click('.export-menu button:has-text("PNG")')]);
+await dl.saveAs('/workspace/permaculture-garden/shots/21_export_cors_fallback.png');
+await p.waitForTimeout(300);
+console.log(dl.suggestedFilename(), '|', await p.evaluate(() => document.body.innerText.match(/[^\n]*내보냄[^\n]*/)?.[0]));
+await p.screenshot({ path: '/workspace/permaculture-garden/shots/21_export_status.png' });
+await b.close();

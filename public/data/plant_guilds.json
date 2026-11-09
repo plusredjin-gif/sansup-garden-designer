@@ -1,0 +1,2145 @@
+{
+ "version": "1.0",
+ "generated": "2026-11-05",
+ "note": "한국 기후용 식물 길드 데이터. 앱 PLANT_LAYERS 의 id(bam, hodu, jat, sangsuri, daeju, sagwa, maesil, bokbunja, gugija, sanddalgi, chwinamul→chamchwi, gosari, danggwi 등)와 최대한 맞춤. 300종 책 쪽은 인쇄 쪽번호(PDF 쪽−1). PFAF 내한성은 PFAF 표기(UK zone)를 그대로 씀. spacing_m 는 전부 폭×0.8 규칙으로 계산한 추정값.",
+ "plants": [
+  {
+   "id": "bam",
+   "ko": "밤나무",
+   "sci": "Castanea crenata",
+   "layer": "교목",
+   "height_m": 15,
+   "width_m": 12,
+   "sun": [
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 4",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "꽃가루받이유인",
+    "멀칭"
+   ],
+   "spacing_m": 9.6,
+   "sources": [
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번1",
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Castanea+crenata"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "hodu",
+   "ko": "호두나무",
+   "sci": "Juglans regia (국내 재배명 Juglans sinensis 포함)",
+   "layer": "교목",
+   "height_m": 18,
+   "width_m": 14,
+   "sun": [
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 5",
+   "region": "중부",
+   "functions": [
+    "식용"
+   ],
+   "spacing_m": 11.2,
+   "sources": [
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번2",
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Juglans+regia"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "jat",
+   "ko": "잣나무",
+   "sci": "Pinus koraiensis",
+   "layer": "교목",
+   "height_m": 20,
+   "width_m": 11,
+   "sun": [
+    "양지"
+   ],
+   "hardiness": "추정 USDA 3~7",
+   "region": "중부",
+   "functions": [
+    "식용",
+    "방풍"
+   ],
+   "spacing_m": 8.8,
+   "sources": [
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번3"
+   ],
+   "estimated": [
+    "hardiness",
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "sangsuri",
+   "ko": "상수리나무",
+   "sci": "Quercus acutissima",
+   "layer": "교목",
+   "height_m": 20,
+   "width_m": null,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "USDA 6~9",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "멀칭",
+    "버섯골목"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.52",
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번4"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "jueop",
+   "ko": "주엽나무",
+   "sci": "Gleditsia japonica",
+   "layer": "교목",
+   "height_m": 20,
+   "width_m": null,
+   "sun": [
+    "양지"
+   ],
+   "hardiness": "USDA 5~8",
+   "region": "전국",
+   "functions": [
+    "질소고정",
+    "꽃가루받이유인",
+    "약용",
+    "멀칭"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.46",
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번5"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "mulori",
+   "ko": "물오리나무",
+   "sci": "Alnus incana subsp. hirsuta",
+   "layer": "교목",
+   "height_m": 20,
+   "width_m": null,
+   "sun": [
+    "양지"
+   ],
+   "hardiness": "USDA 3~7",
+   "region": "중부",
+   "functions": [
+    "질소고정",
+    "멀칭"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.42"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "jagwi",
+   "ko": "자귀나무",
+   "sci": "Albizia julibrissin",
+   "layer": "교목",
+   "height_m": 10,
+   "width_m": null,
+   "sun": [
+    "양지"
+   ],
+   "hardiness": "USDA 6~9",
+   "region": "남부",
+   "functions": [
+    "질소고정",
+    "꽃가루받이유인"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.40"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "ppong",
+   "ko": "뽕나무",
+   "sci": "Morus alba",
+   "layer": "교목",
+   "height_m": 15,
+   "width_m": null,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "USDA 5~8",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "약용"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.50"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "eumnamu",
+   "ko": "음나무",
+   "sci": "Kalopanax septemlobus",
+   "layer": "교목",
+   "height_m": 18,
+   "width_m": null,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "USDA 4~7",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "약용"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.46"
+   ],
+   "estimated": [
+    "functions",
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "sagwa",
+   "ko": "사과나무",
+   "sci": "Malus domestica",
+   "layer": "아교목",
+   "height_m": 6,
+   "width_m": 7,
+   "sun": [
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 3",
+   "region": "중부",
+   "functions": [
+    "식용",
+    "꽃가루받이유인"
+   ],
+   "spacing_m": 5.6,
+   "sources": [
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번7",
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Malus+domestica"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "gam",
+   "ko": "감나무",
+   "sci": "Diospyros kaki",
+   "layer": "아교목",
+   "height_m": 8,
+   "width_m": 8,
+   "sun": [
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 8",
+   "region": "남부",
+   "functions": [
+    "식용",
+    "멀칭"
+   ],
+   "spacing_m": 6.4,
+   "sources": [
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번9",
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Diospyros+kaki"
+   ],
+   "estimated": [
+    "hardiness",
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "daeju",
+   "ko": "대추나무",
+   "sci": "Ziziphus jujuba",
+   "layer": "아교목",
+   "height_m": 7,
+   "width_m": 6,
+   "sun": [
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 6",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "약용",
+    "꽃가루받이유인"
+   ],
+   "spacing_m": 4.8,
+   "sources": [
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번6",
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Ziziphus+jujuba"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "maesil",
+   "ko": "매실나무",
+   "sci": "Prunus mume",
+   "layer": "아교목",
+   "height_m": 5,
+   "width_m": 5.6,
+   "sun": [
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 6",
+   "region": "남부",
+   "functions": [
+    "식용",
+    "약용",
+    "꽃가루받이유인"
+   ],
+   "spacing_m": 4.5,
+   "sources": [
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번8",
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Prunus+mume"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "bae",
+   "ko": "배나무",
+   "sci": "Pyrus pyrifolia",
+   "layer": "아교목",
+   "height_m": 10,
+   "width_m": null,
+   "sun": [
+    "양지",
+    "반그늘"
+   ],
+   "hardiness": "PFAF UK zone 6",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "꽃가루받이유인"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Pyrus+pyrifolia"
+   ],
+   "estimated": [
+    "functions",
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "bipa",
+   "ko": "비파나무",
+   "sci": "Eriobotrya japonica",
+   "layer": "아교목",
+   "height_m": 9,
+   "width_m": 5,
+   "sun": [
+    "양지",
+    "반그늘"
+   ],
+   "hardiness": "PFAF UK zone 7",
+   "region": "남부",
+   "functions": [
+    "식용",
+    "약용",
+    "꽃가루받이유인"
+   ],
+   "spacing_m": 4.0,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Eriobotrya+japonica"
+   ],
+   "estimated": [
+    "functions",
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "mogwa",
+   "ko": "모과나무",
+   "sci": "Chaenomeles sinensis",
+   "layer": "아교목",
+   "height_m": 6,
+   "width_m": 6,
+   "sun": [
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 6",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "약용"
+   ],
+   "spacing_m": 4.8,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Chaenomeles+sinensis"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "sansuyu",
+   "ko": "산수유",
+   "sci": "Cornus officinalis",
+   "layer": "아교목",
+   "height_m": 7,
+   "width_m": null,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "USDA 5~8",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "약용",
+    "꽃가루받이유인"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.66"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "gaeam",
+   "ko": "개암나무",
+   "sci": "Corylus heterophylla",
+   "layer": "관목",
+   "height_m": 7,
+   "width_m": null,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "USDA 4~7",
+   "region": "전국",
+   "functions": [
+    "식용"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.66"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "sansa",
+   "ko": "산사나무",
+   "sci": "Crataegus pinnatifida",
+   "layer": "아교목",
+   "height_m": 6,
+   "width_m": null,
+   "sun": [
+    "양지"
+   ],
+   "hardiness": "USDA 5~9",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "약용",
+    "꽃가루받이유인"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.68"
+   ],
+   "estimated": [
+    "functions",
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "borisu",
+   "ko": "보리수나무",
+   "sci": "Elaeagnus umbellata",
+   "layer": "관목",
+   "height_m": 3.5,
+   "width_m": 3.6,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "추정 USDA 4~8",
+   "region": "전국",
+   "functions": [
+    "질소고정",
+    "식용",
+    "꽃가루받이유인"
+   ],
+   "spacing_m": 2.9,
+   "sources": [
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번12"
+   ],
+   "estimated": [
+    "hardiness",
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "ppolsu",
+   "ko": "뜰보리수",
+   "sci": "Elaeagnus multiflora",
+   "layer": "관목",
+   "height_m": 3,
+   "width_m": 2,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 6",
+   "region": "전국",
+   "functions": [
+    "질소고정",
+    "식용"
+   ],
+   "spacing_m": 1.6,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Elaeagnus+multiflora"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "ssari",
+   "ko": "싸리",
+   "sci": "Lespedeza bicolor",
+   "layer": "관목",
+   "height_m": 3,
+   "width_m": null,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 5",
+   "region": "전국",
+   "functions": [
+    "질소고정",
+    "꽃가루받이유인",
+    "멀칭"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Lespedeza+bicolor"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "joroksari",
+   "ko": "조록싸리",
+   "sci": "Lespedeza maximowiczii",
+   "layer": "관목",
+   "height_m": 3,
+   "width_m": null,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "USDA 5~8",
+   "region": "전국",
+   "functions": [
+    "질소고정",
+    "꽃가루받이유인"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.76"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "bokbunja",
+   "ko": "복분자딸기",
+   "sci": "Rubus coreanus",
+   "layer": "관목",
+   "height_m": 3,
+   "width_m": null,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "USDA 5~7",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "약용"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.86",
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번10"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "sanddalgi",
+   "ko": "산딸기",
+   "sci": "Rubus crataegifolius",
+   "layer": "관목",
+   "height_m": 2.5,
+   "width_m": null,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 5",
+   "region": "전국",
+   "functions": [
+    "식용"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Rubus+crataegifolius"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "gugija",
+   "ko": "구기자나무",
+   "sci": "Lycium chinense",
+   "layer": "관목",
+   "height_m": 2.5,
+   "width_m": 2,
+   "sun": [
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 6",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "약용"
+   ],
+   "spacing_m": 1.6,
+   "sources": [
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번11",
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Lycium+chinense"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "blueberry",
+   "ko": "블루베리",
+   "sci": "Vaccinium corymbosum",
+   "layer": "관목",
+   "height_m": 2,
+   "width_m": 2,
+   "sun": [
+    "양지",
+    "반그늘"
+   ],
+   "hardiness": "PFAF UK zone 2",
+   "region": "전국",
+   "functions": [
+    "식용"
+   ],
+   "spacing_m": 1.6,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Vaccinium+corymbosum"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "saenggang",
+   "ko": "생강나무",
+   "sci": "Lindera obtusiloba",
+   "layer": "관목",
+   "height_m": 3,
+   "width_m": null,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "USDA 6~8",
+   "region": "전국",
+   "functions": [
+    "꽃가루받이유인",
+    "약용"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.78"
+   ],
+   "estimated": [
+    "functions",
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "darae",
+   "ko": "다래",
+   "sci": "Actinidia arguta",
+   "layer": "덩굴",
+   "height_m": 9,
+   "width_m": null,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 4",
+   "region": "전국",
+   "functions": [
+    "식용"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번21",
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Actinidia+arguta"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "omija",
+   "ko": "오미자",
+   "sci": "Schisandra chinensis",
+   "layer": "덩굴",
+   "height_m": 4.5,
+   "width_m": 2.4,
+   "sun": [
+    "반그늘"
+   ],
+   "hardiness": "USDA 4~7",
+   "region": "중부",
+   "functions": [
+    "식용",
+    "약용"
+   ],
+   "spacing_m": 1.9,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.86",
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번22"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "eureum",
+   "ko": "으름덩굴",
+   "sci": "Akebia quinata",
+   "layer": "덩굴",
+   "height_m": null,
+   "width_m": null,
+   "sun": [
+    "그늘",
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "USDA 4~8",
+   "region": "전국",
+   "functions": [
+    "식용"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.60"
+   ],
+   "estimated": [
+    "functions",
+    "height_m",
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "deodeok",
+   "ko": "더덕",
+   "sci": "Codonopsis lanceolata",
+   "layer": "뿌리",
+   "height_m": 1.5,
+   "width_m": 0.4,
+   "sun": [
+    "반그늘"
+   ],
+   "hardiness": "PFAF UK zone 7",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "약용"
+   ],
+   "spacing_m": 0.3,
+   "sources": [
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번24",
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Codonopsis+lanceolata"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "doraji",
+   "ko": "도라지",
+   "sci": "Platycodon grandiflorus",
+   "layer": "뿌리",
+   "height_m": 0.5,
+   "width_m": 0.4,
+   "sun": [
+    "양지",
+    "반그늘"
+   ],
+   "hardiness": "PFAF UK zone 4",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "약용",
+    "꽃가루받이유인"
+   ],
+   "spacing_m": 0.3,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Platycodon+grandiflorus"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "comfrey",
+   "ko": "컴프리",
+   "sci": "Symphytum officinale",
+   "layer": "초본",
+   "height_m": 1.2,
+   "width_m": 0.6,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 5",
+   "region": "전국",
+   "functions": [
+    "다이내믹어큐뮬레이터",
+    "멀칭",
+    "꽃가루받이유인",
+    "약용"
+   ],
+   "spacing_m": 0.5,
+   "sources": [
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번13",
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Symphytum+officinale"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "yarrow",
+   "ko": "서양톱풀",
+   "sci": "Achillea millefolium",
+   "layer": "초본",
+   "height_m": 0.6,
+   "width_m": 0.6,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 2",
+   "region": "전국",
+   "functions": [
+    "다이내믹어큐뮬레이터",
+    "꽃가루받이유인",
+    "약용"
+   ],
+   "spacing_m": 0.5,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Achillea+millefolium"
+   ],
+   "estimated": [
+    "functions",
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "baechohyang",
+   "ko": "배초향",
+   "sci": "Agastache rugosa",
+   "layer": "초본",
+   "height_m": 1,
+   "width_m": 0.6,
+   "sun": [
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 8",
+   "region": "전국",
+   "functions": [
+    "꽃가루받이유인",
+    "해충기피",
+    "식용",
+    "약용"
+   ],
+   "spacing_m": 0.5,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Agastache+rugosa"
+   ],
+   "estimated": [
+    "functions",
+    "hardiness",
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "kkulpul",
+   "ko": "꿀풀",
+   "sci": "Prunella vulgaris",
+   "layer": "지피",
+   "height_m": 0.2,
+   "width_m": 0.3,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 3",
+   "region": "전국",
+   "functions": [
+    "지피",
+    "꽃가루받이유인",
+    "약용"
+   ],
+   "spacing_m": 0.2,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Prunella+vulgaris"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "bakha",
+   "ko": "박하",
+   "sci": "Mentha arvensis",
+   "layer": "지피",
+   "height_m": 0.5,
+   "width_m": 1,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 4",
+   "region": "전국",
+   "functions": [
+    "해충기피",
+    "식용",
+    "약용",
+    "지피"
+   ],
+   "spacing_m": 0.8,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Mentha+arvensis"
+   ],
+   "estimated": [
+    "functions",
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "clover",
+   "ko": "토끼풀(화이트클로버)",
+   "sci": "Trifolium repens",
+   "layer": "지피",
+   "height_m": 0.1,
+   "width_m": 1,
+   "sun": [
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 4",
+   "region": "전국",
+   "functions": [
+    "질소고정",
+    "지피",
+    "꽃가루받이유인"
+   ],
+   "spacing_m": 0.8,
+   "sources": [
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번18",
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Trifolium+repens"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "buchu",
+   "ko": "부추",
+   "sci": "Allium tuberosum",
+   "layer": "초본",
+   "height_m": 0.3,
+   "width_m": 0.3,
+   "sun": [
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 7",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "해충기피"
+   ],
+   "spacing_m": 0.2,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Allium+tuberosum"
+   ],
+   "estimated": [
+    "functions",
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "sanmaneul",
+   "ko": "산마늘",
+   "sci": "Allium victorialis",
+   "layer": "초본",
+   "height_m": 0.6,
+   "width_m": 0.25,
+   "sun": [
+    "그늘",
+    "반그늘"
+   ],
+   "hardiness": "PFAF UK zone 7",
+   "region": "중부",
+   "functions": [
+    "식용",
+    "약용"
+   ],
+   "spacing_m": 0.2,
+   "sources": [
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번19",
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Allium+victorialis"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "sun"
+   ]
+  },
+  {
+   "id": "dallae",
+   "ko": "달래",
+   "sci": "Allium monanthum",
+   "layer": "지피",
+   "height_m": 0.1,
+   "width_m": null,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": null,
+   "region": "전국",
+   "functions": [
+    "식용"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Allium+monanthum"
+   ],
+   "estimated": [
+    "hardiness",
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "wonchuri",
+   "ko": "원추리",
+   "sci": "Hemerocallis fulva",
+   "layer": "초본",
+   "height_m": 1,
+   "width_m": 1,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 4",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "꽃가루받이유인",
+    "지피"
+   ],
+   "spacing_m": 0.8,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Hemerocallis+fulva"
+   ],
+   "estimated": [
+    "functions",
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "ssuk",
+   "ko": "쑥",
+   "sci": "Artemisia princeps",
+   "layer": "초본",
+   "height_m": 1.2,
+   "width_m": null,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 4",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "약용",
+    "해충기피",
+    "다이내믹어큐뮬레이터"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Artemisia+princeps"
+   ],
+   "estimated": [
+    "functions",
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "gaemichwi",
+   "ko": "개미취",
+   "sci": "Aster tataricus",
+   "layer": "초본",
+   "height_m": 2,
+   "width_m": 1.2,
+   "sun": [
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 3",
+   "region": "중부",
+   "functions": [
+    "꽃가루받이유인",
+    "약용"
+   ],
+   "spacing_m": 1.0,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Aster+tataricus"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "chamchwi",
+   "ko": "참취",
+   "sci": "Aster scaber",
+   "layer": "초본",
+   "height_m": 1.2,
+   "width_m": null,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "USDA 4~7",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "꽃가루받이유인"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.104",
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번14"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "eongeonggwi",
+   "ko": "고려엉겅퀴(곤드레)",
+   "sci": "Cirsium setidens",
+   "layer": "초본",
+   "height_m": 1,
+   "width_m": 0.8,
+   "sun": [
+    "반그늘"
+   ],
+   "hardiness": "추정",
+   "region": "중부",
+   "functions": [
+    "식용",
+    "다이내믹어큐뮬레이터"
+   ],
+   "spacing_m": 0.6,
+   "sources": [
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번15"
+   ],
+   "estimated": [
+    "hardiness",
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "gondalbi",
+   "ko": "곤달비",
+   "sci": "Ligularia stenocephala",
+   "layer": "초본",
+   "height_m": 0.4,
+   "width_m": null,
+   "sun": [
+    "반그늘"
+   ],
+   "hardiness": "USDA 3~8",
+   "region": "전국",
+   "functions": [
+    "식용"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.126"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "meowi",
+   "ko": "머위",
+   "sci": "Petasites japonicus",
+   "layer": "지피",
+   "height_m": 0.3,
+   "width_m": null,
+   "sun": [
+    "반그늘"
+   ],
+   "hardiness": "USDA 4~9",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "지피",
+    "멀칭"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.136"
+   ],
+   "estimated": [
+    "functions",
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "dunggulre",
+   "ko": "둥굴레",
+   "sci": "Polygonatum odoratum var. pluriflorum",
+   "layer": "초본",
+   "height_m": 0.5,
+   "width_m": null,
+   "sun": [
+    "그늘",
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "USDA 3~8",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "약용"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.136",
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번20"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "pyeondeuk",
+   "ko": "파드득나물",
+   "sci": "Cryptotaenia japonica",
+   "layer": "초본",
+   "height_m": 1,
+   "width_m": null,
+   "sun": [
+    "그늘",
+    "반그늘"
+   ],
+   "hardiness": "USDA 4~8",
+   "region": "전국",
+   "functions": [
+    "식용"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.112"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "chamnamul",
+   "ko": "참나물",
+   "sci": "Spuriopimpinella brachycarpa",
+   "layer": "초본",
+   "height_m": 0.8,
+   "width_m": null,
+   "sun": [
+    "그늘",
+    "반그늘"
+   ],
+   "hardiness": "USDA 4~7",
+   "region": "중부",
+   "functions": [
+    "식용"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.140"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "ttangdureup",
+   "ko": "땅두릅",
+   "sci": "Aralia cordata",
+   "layer": "초본",
+   "height_m": 1.5,
+   "width_m": null,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "USDA 4~8",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "약용"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.102"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "nungaeseungma",
+   "ko": "눈개승마",
+   "sci": "Aruncus dioicus",
+   "layer": "초본",
+   "height_m": 1.5,
+   "width_m": null,
+   "sun": [
+    "반그늘"
+   ],
+   "hardiness": "USDA 3~7",
+   "region": "중부",
+   "functions": [
+    "식용"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.102"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "gosari",
+   "ko": "고사리",
+   "sci": "Pteridium aquilinum",
+   "layer": "초본",
+   "height_m": 1.2,
+   "width_m": 2,
+   "sun": [
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "PFAF UK zone 4",
+   "region": "전국",
+   "functions": [
+    "식용"
+   ],
+   "spacing_m": 1.6,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Pteridium+aquilinum"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "cheongnamul",
+   "ko": "청나래고사리",
+   "sci": "Matteuccia struthiopteris",
+   "layer": "초본",
+   "height_m": 1,
+   "width_m": 0.5,
+   "sun": [
+    "반그늘"
+   ],
+   "hardiness": "PFAF UK zone 2",
+   "region": "중부",
+   "functions": [
+    "식용"
+   ],
+   "spacing_m": 0.4,
+   "sources": [
+    "PFAF https://pfaf.org/user/Plant.aspx?LatinName=Matteuccia+struthiopteris"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  },
+  {
+   "id": "gwanjung",
+   "ko": "관중",
+   "sci": "Dryopteris crassirhizoma",
+   "layer": "초본",
+   "height_m": 1,
+   "width_m": null,
+   "sun": [
+    "그늘",
+    "반그늘"
+   ],
+   "hardiness": "USDA 5~8",
+   "region": "전국",
+   "functions": [
+    "약용",
+    "지피"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.114"
+   ],
+   "estimated": [
+    "functions",
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "maekmun",
+   "ko": "맥문동",
+   "sci": "Liriope muscari",
+   "layer": "지피",
+   "height_m": 0.6,
+   "width_m": null,
+   "sun": [
+    "그늘",
+    "반그늘",
+    "양지"
+   ],
+   "hardiness": "USDA 6~10",
+   "region": "남부",
+   "functions": [
+    "지피",
+    "약용"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.128"
+   ],
+   "estimated": [
+    "functions",
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "bibichu",
+   "ko": "비비추",
+   "sci": "Hosta longipes",
+   "layer": "지피",
+   "height_m": 0.3,
+   "width_m": null,
+   "sun": [
+    "그늘",
+    "반그늘"
+   ],
+   "hardiness": "USDA 3~8",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "지피"
+   ],
+   "spacing_m": null,
+   "sources": [
+    "국립수목원 『숲정원을 위한 식물 300종』 인쇄 p.122"
+   ],
+   "estimated": [
+    "functions",
+    "region",
+    "spacing_m",
+    "width_m"
+   ]
+  },
+  {
+   "id": "pyogo",
+   "ko": "표고(골목)",
+   "sci": "Lentinula edodes",
+   "layer": "뿌리",
+   "height_m": 0.15,
+   "width_m": 0.4,
+   "sun": [
+    "그늘"
+   ],
+   "hardiness": "해당 없음(균류)",
+   "region": "전국",
+   "functions": [
+    "식용",
+    "약용"
+   ],
+   "spacing_m": 0.3,
+   "sources": [
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감 연번23"
+   ],
+   "estimated": [
+    "region",
+    "spacing_m"
+   ]
+  }
+ ],
+ "guilds": [
+  {
+   "id": "guild_sagwa",
+   "name": "사과 길드",
+   "center": "sagwa",
+   "region": "중부",
+   "members": [
+    {
+     "plant": "ssari",
+     "role": "질소고정·꽃",
+     "ring_m": 3,
+     "count_hint": 2,
+     "note": ""
+    },
+    {
+     "plant": "comfrey",
+     "role": "다이내믹어큐뮬레이터·멀칭(찹앤드롭)",
+     "ring_m": 1.5,
+     "count_hint": 4,
+     "note": ""
+    },
+    {
+     "plant": "buchu",
+     "role": "해충기피(부추류)",
+     "ring_m": 1,
+     "count_hint": 6,
+     "note": ""
+    },
+    {
+     "plant": "yarrow",
+     "role": "익충 유인",
+     "ring_m": 2,
+     "count_hint": 4,
+     "note": ""
+    },
+    {
+     "plant": "clover",
+     "role": "질소고정 지피",
+     "ring_m": 1.0,
+     "count_hint": 8,
+     "note": ""
+    },
+    {
+     "plant": "bokbunja",
+     "role": "식용 관목(수관 밖)",
+     "ring_m": 4,
+     "count_hint": 2,
+     "note": ""
+    }
+   ],
+   "sources": [
+    "Toby Hemenway, Gaia's Garden (2nd ed., 2009) 7장 '길드' — 사과 길드 등 길드 구성 원칙(일반 관행)",
+    "Martin Crawford, Creating a Forest Garden (2010) — 층위·간격 원칙(일반 관행)",
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감(길드 구성 시트)"
+   ],
+   "estimated": [
+    "members",
+    "ring_m",
+    "count_hint"
+   ],
+   "note": "조합·거리는 일반 퍼머컬처 관행에 따른 추론(추정). "
+  },
+  {
+   "id": "guild_gam",
+   "name": "감 길드",
+   "center": "gam",
+   "region": "남부",
+   "members": [
+    {
+     "plant": "borisu",
+     "role": "질소고정·식용",
+     "ring_m": 3.5,
+     "count_hint": 2,
+     "note": ""
+    },
+    {
+     "plant": "comfrey",
+     "role": "다이내믹어큐뮬레이터·멀칭",
+     "ring_m": 2,
+     "count_hint": 4,
+     "note": ""
+    },
+    {
+     "plant": "baechohyang",
+     "role": "꽃가루받이유인",
+     "ring_m": 2.5,
+     "count_hint": 3,
+     "note": ""
+    },
+    {
+     "plant": "maekmun",
+     "role": "지피",
+     "ring_m": 1.5,
+     "count_hint": 8,
+     "note": ""
+    },
+    {
+     "plant": "doraji",
+     "role": "뿌리·꽃",
+     "ring_m": 2,
+     "count_hint": 6,
+     "note": ""
+    }
+   ],
+   "sources": [
+    "Toby Hemenway, Gaia's Garden (2nd ed., 2009) 7장 '길드' — 사과 길드 등 길드 구성 원칙(일반 관행)",
+    "Martin Crawford, Creating a Forest Garden (2010) — 층위·간격 원칙(일반 관행)",
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감(길드 구성 시트)"
+   ],
+   "estimated": [
+    "members",
+    "ring_m",
+    "count_hint"
+   ],
+   "note": "조합·거리는 일반 퍼머컬처 관행에 따른 추론(추정). "
+  },
+  {
+   "id": "guild_bam",
+   "name": "밤 길드(숲가장자리형)",
+   "center": "bam",
+   "region": "전국",
+   "members": [
+    {
+     "plant": "joroksari",
+     "role": "질소고정",
+     "ring_m": 6,
+     "count_hint": 3,
+     "note": ""
+    },
+    {
+     "plant": "gaeam",
+     "role": "식용 관목층",
+     "ring_m": 7,
+     "count_hint": 2,
+     "note": ""
+    },
+    {
+     "plant": "chamchwi",
+     "role": "반그늘 산나물",
+     "ring_m": 4,
+     "count_hint": 8,
+     "note": ""
+    },
+    {
+     "plant": "dunggulre",
+     "role": "그늘 산나물",
+     "ring_m": 3,
+     "count_hint": 8,
+     "note": ""
+    },
+    {
+     "plant": "pyogo",
+     "role": "골목 재배(가지치기 목재 활용)",
+     "ring_m": 5,
+     "count_hint": 4,
+     "note": ""
+    },
+    {
+     "plant": "deodeok",
+     "role": "덩굴성 뿌리",
+     "ring_m": 4,
+     "count_hint": 6,
+     "note": ""
+    }
+   ],
+   "sources": [
+    "Toby Hemenway, Gaia's Garden (2nd ed., 2009) 7장 '길드' — 사과 길드 등 길드 구성 원칙(일반 관행)",
+    "Martin Crawford, Creating a Forest Garden (2010) — 층위·간격 원칙(일반 관행)",
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감(길드 구성 시트)"
+   ],
+   "estimated": [
+    "members",
+    "ring_m",
+    "count_hint"
+   ],
+   "note": "조합·거리는 일반 퍼머컬처 관행에 따른 추론(추정). 밤은 수관이 넓어 하층은 반그늘형 종으로 구성."
+  },
+  {
+   "id": "guild_daeju",
+   "name": "대추 길드",
+   "center": "daeju",
+   "region": "전국",
+   "members": [
+    {
+     "plant": "ppolsu",
+     "role": "질소고정·식용",
+     "ring_m": 3,
+     "count_hint": 2,
+     "note": ""
+    },
+    {
+     "plant": "gugija",
+     "role": "식용·약용 관목",
+     "ring_m": 2.5,
+     "count_hint": 2,
+     "note": ""
+    },
+    {
+     "plant": "yarrow",
+     "role": "익충 유인",
+     "ring_m": 1.5,
+     "count_hint": 4,
+     "note": ""
+    },
+    {
+     "plant": "kkulpul",
+     "role": "지피·꽃",
+     "ring_m": 1,
+     "count_hint": 8,
+     "note": ""
+    },
+    {
+     "plant": "doraji",
+     "role": "뿌리",
+     "ring_m": 2,
+     "count_hint": 6,
+     "note": ""
+    }
+   ],
+   "sources": [
+    "Toby Hemenway, Gaia's Garden (2nd ed., 2009) 7장 '길드' — 사과 길드 등 길드 구성 원칙(일반 관행)",
+    "Martin Crawford, Creating a Forest Garden (2010) — 층위·간격 원칙(일반 관행)",
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감(길드 구성 시트)"
+   ],
+   "estimated": [
+    "members",
+    "ring_m",
+    "count_hint"
+   ],
+   "note": "조합·거리는 일반 퍼머컬처 관행에 따른 추론(추정). "
+  },
+  {
+   "id": "guild_maesil",
+   "name": "매실 길드",
+   "center": "maesil",
+   "region": "남부",
+   "members": [
+    {
+     "plant": "joroksari",
+     "role": "질소고정",
+     "ring_m": 3,
+     "count_hint": 2,
+     "note": ""
+    },
+    {
+     "plant": "comfrey",
+     "role": "다이내믹어큐뮬레이터",
+     "ring_m": 1.5,
+     "count_hint": 3,
+     "note": ""
+    },
+    {
+     "plant": "bakha",
+     "role": "해충기피·지피",
+     "ring_m": 1,
+     "count_hint": 6,
+     "note": ""
+    },
+    {
+     "plant": "wonchuri",
+     "role": "지피·꽃",
+     "ring_m": 2,
+     "count_hint": 4,
+     "note": ""
+    },
+    {
+     "plant": "buchu",
+     "role": "해충기피",
+     "ring_m": 1,
+     "count_hint": 6,
+     "note": ""
+    }
+   ],
+   "sources": [
+    "Toby Hemenway, Gaia's Garden (2nd ed., 2009) 7장 '길드' — 사과 길드 등 길드 구성 원칙(일반 관행)",
+    "Martin Crawford, Creating a Forest Garden (2010) — 층위·간격 원칙(일반 관행)",
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감(길드 구성 시트)"
+   ],
+   "estimated": [
+    "members",
+    "ring_m",
+    "count_hint"
+   ],
+   "note": "조합·거리는 일반 퍼머컬처 관행에 따른 추론(추정). "
+  },
+  {
+   "id": "guild_bae",
+   "name": "배 길드",
+   "center": "bae",
+   "region": "전국",
+   "members": [
+    {
+     "plant": "ssari",
+     "role": "질소고정",
+     "ring_m": 4,
+     "count_hint": 2,
+     "note": ""
+    },
+    {
+     "plant": "comfrey",
+     "role": "다이내믹어큐뮬레이터",
+     "ring_m": 2,
+     "count_hint": 4,
+     "note": ""
+    },
+    {
+     "plant": "baechohyang",
+     "role": "꽃가루받이유인",
+     "ring_m": 2.5,
+     "count_hint": 3,
+     "note": ""
+    },
+    {
+     "plant": "clover",
+     "role": "질소고정 지피",
+     "ring_m": 1.5,
+     "count_hint": 8,
+     "note": ""
+    },
+    {
+     "plant": "blueberry",
+     "role": "식용 관목(산성토 구역)",
+     "ring_m": 4.5,
+     "count_hint": 2,
+     "note": ""
+    }
+   ],
+   "sources": [
+    "Toby Hemenway, Gaia's Garden (2nd ed., 2009) 7장 '길드' — 사과 길드 등 길드 구성 원칙(일반 관행)",
+    "Martin Crawford, Creating a Forest Garden (2010) — 층위·간격 원칙(일반 관행)",
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감(길드 구성 시트)"
+   ],
+   "estimated": [
+    "members",
+    "ring_m",
+    "count_hint"
+   ],
+   "note": "조합·거리는 일반 퍼머컬처 관행에 따른 추론(추정). "
+  },
+  {
+   "id": "guild_hodu",
+   "name": "호두 길드(내성종형)",
+   "center": "hodu",
+   "region": "중부",
+   "members": [
+    {
+     "plant": "eongeonggwi",
+     "role": "산나물",
+     "ring_m": 6,
+     "count_hint": 6,
+     "note": ""
+    },
+    {
+     "plant": "ssuk",
+     "role": "다이내믹어큐뮬레이터",
+     "ring_m": 5,
+     "count_hint": 6,
+     "note": ""
+    },
+    {
+     "plant": "gosari",
+     "role": "식용 양치",
+     "ring_m": 7,
+     "count_hint": 6,
+     "note": ""
+    },
+    {
+     "plant": "ppolsu",
+     "role": "질소고정",
+     "ring_m": 8,
+     "count_hint": 2,
+     "note": ""
+    },
+    {
+     "plant": "wonchuri",
+     "role": "지피",
+     "ring_m": 6,
+     "count_hint": 6,
+     "note": ""
+    }
+   ],
+   "sources": [
+    "Toby Hemenway, Gaia's Garden (2nd ed., 2009) 7장 '길드' — 사과 길드 등 길드 구성 원칙(일반 관행)",
+    "Martin Crawford, Creating a Forest Garden (2010) — 층위·간격 원칙(일반 관행)",
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감(길드 구성 시트)"
+   ],
+   "estimated": [
+    "members",
+    "ring_m",
+    "count_hint"
+   ],
+   "note": "조합·거리는 일반 퍼머컬처 관행에 따른 추론(추정). 호두류는 주글론으로 주변 식물 생육을 억제하는 것으로 알려져 수관 아래 종 선택이 제한적(PFAF Juglans regia 항목 참고). 반드시 현장 시험 필요."
+  },
+  {
+   "id": "guild_sangsuri",
+   "name": "상수리 길드(임간 산나물형)",
+   "center": "sangsuri",
+   "region": "전국",
+   "members": [
+    {
+     "plant": "pyogo",
+     "role": "골목 재배",
+     "ring_m": 4,
+     "count_hint": 6,
+     "note": ""
+    },
+    {
+     "plant": "sanmaneul",
+     "role": "그늘 산나물",
+     "ring_m": 3,
+     "count_hint": 10,
+     "note": ""
+    },
+    {
+     "plant": "dunggulre",
+     "role": "그늘 산나물",
+     "ring_m": 3,
+     "count_hint": 8,
+     "note": ""
+    },
+    {
+     "plant": "chamnamul",
+     "role": "그늘 산나물",
+     "ring_m": 4,
+     "count_hint": 8,
+     "note": ""
+    },
+    {
+     "plant": "gwanjung",
+     "role": "지피",
+     "ring_m": 5,
+     "count_hint": 6,
+     "note": ""
+    },
+    {
+     "plant": "saenggang",
+     "role": "하층 관목",
+     "ring_m": 6,
+     "count_hint": 2,
+     "note": ""
+    },
+    {
+     "plant": "omija",
+     "role": "덩굴(가장자리 지주)",
+     "ring_m": 8,
+     "count_hint": 2,
+     "note": ""
+    }
+   ],
+   "sources": [
+    "Toby Hemenway, Gaia's Garden (2nd ed., 2009) 7장 '길드' — 사과 길드 등 길드 구성 원칙(일반 관행)",
+    "Martin Crawford, Creating a Forest Garden (2010) — 층위·간격 원칙(일반 관행)",
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감(길드 구성 시트)"
+   ],
+   "estimated": [
+    "members",
+    "ring_m",
+    "count_hint"
+   ],
+   "note": "조합·거리는 일반 퍼머컬처 관행에 따른 추론(추정). "
+  },
+  {
+   "id": "guild_bipa",
+   "name": "비파 길드(남부)",
+   "center": "bipa",
+   "region": "남부",
+   "members": [
+    {
+     "plant": "jagwi",
+     "role": "질소고정(북쪽 배치)",
+     "ring_m": 4.5,
+     "count_hint": 1,
+     "note": ""
+    },
+    {
+     "plant": "comfrey",
+     "role": "다이내믹어큐뮬레이터",
+     "ring_m": 1.5,
+     "count_hint": 3,
+     "note": ""
+    },
+    {
+     "plant": "maekmun",
+     "role": "지피",
+     "ring_m": 1.5,
+     "count_hint": 8,
+     "note": ""
+    },
+    {
+     "plant": "bakha",
+     "role": "해충기피·지피",
+     "ring_m": 1,
+     "count_hint": 6,
+     "note": ""
+    },
+    {
+     "plant": "buchu",
+     "role": "해충기피",
+     "ring_m": 1,
+     "count_hint": 6,
+     "note": ""
+    }
+   ],
+   "sources": [
+    "Toby Hemenway, Gaia's Garden (2nd ed., 2009) 7장 '길드' — 사과 길드 등 길드 구성 원칙(일반 관행)",
+    "Martin Crawford, Creating a Forest Garden (2010) — 층위·간격 원칙(일반 관행)",
+    "사용자 식생 통합DB: 퍼머컬쳐_7계층_식물길드_도감(길드 구성 시트)"
+   ],
+   "estimated": [
+    "members",
+    "ring_m",
+    "count_hint"
+   ],
+   "note": "조합·거리는 일반 퍼머컬처 관행에 따른 추론(추정). "
+  }
+ ]
+}
